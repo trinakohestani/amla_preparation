@@ -448,3 +448,23 @@ sns.heatmap(df.corr(), annot=True)    # correlation matrix
 8. Mutable default arguments, and reference instead of copy with lists.
 9. Correlation ≠ causation, r = 0 ≠ independence.
 10. R² always rises with more variables, so use adjusted R² or cross-validation.
+
+
+
+
+Core Concepts of AML Threshold Analysis
+
+• Alert Optimization and Tuning: The process of adjusting threshold parameters (e.g., changing a wire transfer trigger from $10,000 to $15,000) to ensure the system flags truly suspicious behavior rather than normal transactions.
+• False Positive vs. False Negative Balance:
+	• High thresholds reduce false positives (less noise for investigators) but increase false negatives (missed illicit activity).
+	• Low thresholds catch more risk (fewer false negatives) but flood the compliance team with false positives.
+• Above-the-Line (ATL) Testing: Evaluating transactions that fell above the current threshold to see if the rules are accurately identifying suspicious activity.
+• Below-the-Line (BTL) Testing: Inspecting a sample of transactions that fell just below the current threshold to check if illicit activity is slipping through undetected. This justifies keeping or moving the threshold.
+• Risk-Based Segmentation: Applying different thresholds to different customer segments based on their risk profile (e.g., lower thresholds for High-Net-Worth individuals or High-Risk jurisdictions).
+• Statistical Modeling: Using historical transaction data, standard deviations, or peer-group analysis to mathematically determine where a threshold should be set.
+
+Typologies and Common Threshold Types
+
+• Velocity Thresholds: Flagging a specific number of transactions within a short timeframe (e.g., 5 cash deposits in 24 hours).
+• Value/Volume Thresholds: Flagging single or cumulative transactions exceeding a dollar amount (e.g., total transfers exceeding $50,000 in a month).
+• Structuring / Smurfing Thresholds: Detecting transactions set deliberately just below regulatory reporting limits (e.g., multiple deposits of $9,900 to avoid a $10,000 CTR limit).

@@ -48,6 +48,27 @@ P(A|B) = P(B|A)·P(A) / P(B)
 
 Despite good sensitivity, over 90% of alerts are false alarms. This is the **base rate fallacy**.
 
+
+Core Performance Metrics
+
+**• Sensitivity (True Positive Rate / Recall):**
+	• Definition: The proportion of actual positives that are correctly identified.
+	• Formula: \(\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}}\)
+	• Use case: High sensitivity means very few false negatives; ideal for screening tests (SnN-OUT: a sensitive test with a negative result rules out the condition).
+ 
+**• Specificity (True Negative Rate):**
+	• Definition: The proportion of actual negatives that are correctly identified.
+	• Formula: \(\text{Specificity} = \text{TN} / (\text{TN} + \text{FP}) = \frac{\text{TN}}{\text{FP} + \text{TN}}\)
+	• Use case: High specificity means very few false positives; ideal for confirmatory tests (SpP-IN: a specific test with a positive result rules in the condition).
+ 
+**• False Positive Rate (FPR):**
+	• Definition: The proportion of actual negatives that are wrongly called positive (1 - Specificity).
+	• Formula: \(\text{FPR} = \frac{\text{FP}}{\text{FP} + \text{TN}}\)
+ 
+**• False Negative Rate (FNR):**
+	• Definition: The proportion of actual positives that are wrongly called negative (1 - Sensitivity).
+	• Formula: \(\text{FNR} = \frac{\text{FN}}{\text{TP} + \text{FN}}\)
+
 **Key distributions**
 
 | Distribution | Use case | Parameters | E[X] / Var |
